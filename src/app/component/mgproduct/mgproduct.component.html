@@ -1,0 +1,37 @@
+<table id="customers">
+  <tr>
+    <th>ID</th>
+    <th>Code</th>
+    <th>Name Product</th>
+    <th>Price Sale</th>
+    <th>Sale</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let pt of productsList">
+    <td>{{pt.id}}</td>
+    <td>{{pt.code}}</td>
+    <td>{{pt.name}}</td>
+    <td>{{pt.priceSale}}</td>
+    <td>{{pt.sale}}</td>
+    <td>{{pt.title}}</td>
+    <td>{{pt.description}}</td>
+    <td style="align-items: center"><img *ngIf="pt?.image" src="{{pt?.image}}" height="50px;"/></td>
+    <td>
+      <i class="bi bi-trash" style="cursor: pointer; color: red;"
+       title="Click to delete product" (click)="deleteProductById(pt.id)">
+        Delete
+      </i>
+      &nbsp; | &nbsp;
+      <i class="bi bi-pencil" title="Click to edit product" style="cursor: pointer;color: red;" (click)="editProduct(pt.id)">
+      Edit
+    </i>
+    </td>
+  </tr>
+</table>
+<br>
+<button type="submit" (click)="addProduct()" style="margin-left: 50px;">Add Product</button>
+
+

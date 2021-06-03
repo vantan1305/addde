@@ -1,0 +1,101 @@
+
+<div id="layoutAuthentication_content">
+  <main>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-5">
+                  <div class="card shadow-lg border-0 rounded-lg mt-5">
+                      <div class="card-header"><h3 class="text-center font-weight-light my-4">Products Form</h3></div>
+                      <div class="card-body">
+                          <form [formGroup]="productsForm"
+                          class="row justify-content-md-center" >
+                          <div class="col-md-8">
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label">
+                                Code:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="text" formControlName="code"
+                                   require>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label" require>
+                                Name Product:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="text" formControlName="name"
+                                   require>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label">
+                                Price Sale:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="number" formControlName="priceSale"
+                                   require>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label">
+                                Sale:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="number" formControlName="sale"
+                                   require>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label">
+                                Title:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="text" formControlName="title"
+                                   require>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label">
+                                Description:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="text" formControlName="description"
+                                   require>
+                              </div>
+                            </div>
+                             <br>
+                            <div class="form-group row">
+                              <label  class="col-4 col-form-label">
+                                Image:
+                              </label>
+                              <div class="col-8">
+                                <input class="form-control" type="text" formControlName="image"
+                                  >
+                              </div>
+                            </div>
+                            <!-- <img src="" alt=""> -->
+                            <br>
+                            <div class="form-group row" >
+                              <div class="col-10 offset-2">
+                                <br>
+                                <button type="submit" class="btn btn-primary" (click)="addPro()" style="margin-left: -150px;">Thêm và làm mới</button>
+
+                                <button type="submit" class="btn btn-primary" (click)="addProToList()" style="margin-left: 50px;">Thêm rồi trở về danh sách</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+</div>
+
